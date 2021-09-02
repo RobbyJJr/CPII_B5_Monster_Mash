@@ -5,23 +5,32 @@ print("Welcome to Monster Mash!")
 # Game Settings
 battlefield = []
 numPlayers = ''
+charClass = ['Elf','Fairy','Orc','Duck']
 
+# Validation Loop for number of players
 while re.search(r'^\d+$',numPlayers) == None:
   numPlayers = input('How many players are playing? (integers) ')
 numPlayers = int(numPlayers)
- 
-
-# This is my line (Jeven)
-
-                                    
 
 
+# Set up the players
+# Loop to set up the characters
+for i in range(numPlayers):
+  # What character type?
+  choice = ''
+  while choice not in enumerate(charClass):
+    choice = ''
+    for i,cClass in enumerate(charClass):
+      print(f'{i}: {cClass}')
+    while not choice.isnumeric():
+      choice = input('Choose a character from the list above: ')
+    choice = int(choice)
+  # Ask for the name?
+
+  # Random stats for simplicity
 
 
-
-
-
-
+"""                                    
 # Max W
 # Change the obj in the 'target' variable depending on what the objects are called obj1 = Orc(...) or char1 = Orc(...).
 
@@ -39,3 +48,4 @@ for i in range(3):  # change 3 to numPlayers
     all_characters.append(target_name)
 
 print(all_characters)
+"""
