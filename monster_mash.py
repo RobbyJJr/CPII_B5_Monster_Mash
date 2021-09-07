@@ -34,8 +34,7 @@ for i in range(numPlayers):
   battlefield.append(temp_char)
 
 battlefield[0].attack(battlefield[1])
-# push test
-
+# get push
   
 
 """                                    
